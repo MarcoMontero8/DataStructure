@@ -1,0 +1,125 @@
+# include<iostream>
+# include<<conio.h>
+# include<stdlib.h>
+using namespace std;
+
+struct Nodo{
+  int projectID;
+  Nodo *next;
+}
+
+struct Nodo{
+  int studentID;
+  Nodo2 *next
+}
+
+void Datos();
+void InsertStudentID(Nodo *&, Nodo *&, int);
+void InsertProyectID(Nodo *&, Nodo *&, int);
+bool empty_queue(Nodo *);
+void ModifyQueue(Nodo *&, Nodo *&, int);
+
+int main();
+    Datos();
+    getch();
+    return 0;
+}
+
+void Datos(){
+    int opc;
+    int StudentID;
+    Nodo *front = NULL;
+    Nodo *rear = NULL;
+    
+    do{
+        cout<<"/t.Datos:./n";
+        cout<<"1.Insert student ID in queue"<<end1;
+        cout<<"2.Insert proyect ID in queue"<<end1;
+        cout<<"3.Show data stored in queue"<<end1;
+        cout<<"4.Exit"<<end1;
+        cout<<"Options:";
+        cin>>opc;
+        
+        switch(opc){
+            case 1: cout<<"/Insert the student ID to add to queue:";
+                    cin>>StudentID;
+                    insertStudentID(front, rear, StudentID)
+            break;
+            
+            case 2: cout<<"/Insert the Project ID to add to queue:";
+                    cin>>ProjectID;
+                    insertProjectID(front, rear, ProjectID)
+            
+            break;
+            
+            case 3: 
+            
+            break;
+            
+            case 4:
+            
+            break;
+        }
+     }
+ }
+ 
+//Insert elements in queue
+
+void InsertStudentID(Nodo *&, Nodo *&, int s){
+    Nodo "new_Nodo = new Nodo();
+    new_nodo->StudentID = s;
+    new_nodo->next = NULL;
+    
+    if(empty_queue(front)){
+        front = new_nodo;
+    }
+    else{
+         end-> next = new_nodo;
+    }
+    end = new_Nodo;
+}
+void InsertProyectID(Nodo *&, Nodo *&, int p){
+    Nodo "new_Nodo = new Nodo();
+    new_nodo->ProyectID = p;
+    new_nodo->next = NULL;
+    
+    if(empty_queue(front)){
+        front = new_nodo;
+    }
+    else{
+         end-> next = new_nodo;
+    }
+    end = new_Nodo;
+}
+
+//Function to determine if queue is empty
+
+bool empty_queue(Nodo *front){
+    return(front == NULL)? true : false
+}
+
+//Function to modify elements in queue
+void ModifyQueue(Nodo *&front, Nodo *&rear, int &s, int &p);
+    s = front->StudentID;
+    Nodo *aux = front;
+    
+    if(front == rear){
+        front = NULL;
+        rear = NULL;
+    }
+    else{
+        front = front->next
+    }
+    delete aux;
+    
+    p = front->ProjectID
+    Nodo *aux = front;
+    
+    if(front == rear){
+        front = NULL;
+        rear = NULL;
+    }
+    else{
+    }
+    delete aux;
+}
