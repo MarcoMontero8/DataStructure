@@ -41,26 +41,32 @@ void Datos(){
         cin>>opc;
         
         switch(opc){
-            case 1: cout<<"/Insert the student ID to add to queue:";
+            case 1: cout<<"/nInsert the student ID to add to queue:";
                     cin>>StudentID;
                     insertStudentID(front, rear, StudentID)
             break;
             
-            case 2: cout<<"/Insert the Project ID to add to queue:";
+            case 2: cout<<"/nInsert the Project ID to add to queue:";
                     cin>>ProjectID;
                     insertProjectID(front, rear, ProjectID)
             
             break;
             
-            case 3: 
-            
+            case 3: cout<<"/nModify the elements of queue:";
+                    while(front != NULL)
+                        ModifyQueue(front, rear, s, p)
+                        if(front != NULL){
+                            cout<<s<<" , ";
+                        elif(front != NULL){
+                            cout<<p<<" , ";
+                        else{
+                            cout<<s, p <<" . ";
             break;
             
-            case 4:
-            
-            break;
+            case 4:break;
         }
-     }
+        system("cls");
+     }while(opc !=4);
  }
  
 //Insert elements in queue
