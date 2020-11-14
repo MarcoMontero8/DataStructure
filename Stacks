@@ -1,0 +1,68 @@
+#include<iostream>
+#include<conio.h>
+
+using namespace std;
+
+struct Nodo{
+    char proyect;
+    float mark;
+    Nodo *next;
+ };
+ //Generic function stack
+ void CreateStack(Nodo *&, char, float);
+ void RemoveElement(Nodo *&, char, float)
+ 
+ int main(){
+    Nodo *stack = NULL
+    char proyect;
+    float mark;
+    char rpt;
+    
+    do{
+         cout<<"Introduce the name of the proyect:";
+         cin>>proyect;
+         cout<<"Introduce the mark of the proyect:";
+         cin>>mark;
+         
+         CreateStack(stack, proyect, mark);
+         
+         cout<<"/Do you want to add another proyect and mark?(Yes/No)";
+          
+         cin>>rpt;
+         
+    }while((rpt == 'Yes')||(rpt == 'yes'));
+    
+    cout<<"/nRemoving elemnts from stack:";
+    while(stack != NULL)
+        RemoveElement(stack, proyect, mark);
+        if(stack != NULL){
+          cout<<proyect<<" , ";
+          cout<<mark<<" , ";
+        }
+        else{
+          cout<<proyect<<" . ";
+          cout<<mark<<" . ";
+    }
+ }
+    getch();
+    return 0;
+ }
+ 
+void CreateStack(Nodo *&stack, char c, float m){
+     Nodo *new_nodo = new Nodo();
+     new_nodo->proyect = p;
+     new_nodo->mark = m;
+     new_nodo->next = stack;
+     stack = new_nodo;
+     
+     cout<<"/tThe Proyect"<<p<<" & Mark"<<m<<" have been succesfully added to the stack";
+ }
+     
+ void RemoveElement(Nodo *&stack, char &p, float &m){
+         Nodo *aux = stack;
+         p = aux-> proyect;
+         m = aux-> mark;
+         stack = aux-> next;
+         delete aux;
+         
+ }  
